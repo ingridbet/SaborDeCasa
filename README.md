@@ -62,7 +62,7 @@ Sabor de Casa is an app that allows you to explore the vast world of Mexican Cui
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section] 
+![](IMG_0949.jpg)
 
 ### [BONUS] Digital Wireframes & Mockups
 ### [BONUS] Interactive Prototype
