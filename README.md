@@ -2,6 +2,12 @@
 
 # Sabor De Casa
 
+<div>
+    <a href="https://www.loom.com/share/ad27d9599fd9466ebc5c504585d591a1">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/ad27d9599fd9466ebc5c504585d591a1-with-play.gif">
+    </a>
+  </div>
+
 ## Table of Contents
 
 1. Overview
