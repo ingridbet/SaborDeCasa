@@ -1,86 +1,38 @@
-# Original App Design Project - README
+# Sprint2 - *SaborDeCasa*
 
-# Sabor De Casa
+Submitted by: **Ingrid Betancourt**
 
-<div>
-    <a href="https://www.loom.com/share/ad27d9599fd9466ebc5c504585d591a1">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/ad27d9599fd9466ebc5c504585d591a1-with-play.gif">
-    </a>
-  </div>
+Time spent: **2** hours spent in total
 
-## Table of Contents
+## Required Features
 
-1. Overview
-2. Product Spec
-3. Wireframes
-4. Schema
+The following functionality is completed:
 
-## Overview
-### Description
-Sabor de Casa is an app that allows you to explore the vast world of Mexican Cuisine. Search for your favorite mexican recipes to plan your meals and satisfy your cravings. Document your own recipes by easily uploading photos, jot down ingredients and instructions to capture the essence of your own family recipes. 
+- [ ] Search Page Implementation
+- [ ] Connection to Recipe API
 
-### App Evaluation
-   - **Category:** Lifestyle
-   - **Description:** This app would essentially allow users to create a sort of recipe book. Users will be able to upload a new recipe that will be stored in their profile. They will be able to have a favorites tab where they can store their favorite recipes.
-   - **Mobile:** Quickly access recipes in real time 
-   - **Story:** Creates a place where Mexican Cuisine is prioritized when searching and storing recipes. Users can search general cuisine but also keep a record of their own family recipes. 
-   - **Market:** Any person of Mexican descent wishing to connect with an aspect of their culture as well as general people who enjoy mexican cuisine
-   - **Habit:** People constantly refer to this to prepare dinner/deserts etc.
-   - **Scope:** V1 would allow users to search recipes. V2 would allow users to upload their own recipes.V3 would allow users to favorite and save a recipe to a diferent tab that can easily be accessed.
-## Product Spec
-### 1. User Stories (Required and Optional)
-**Required Must-have Stories**
-- User can upload a new recipe to their profile
-- User can search for recipes 
-- User can favorite recipes that are searched
+The following features are **to be** implemented:
 
-**Optional Nice-to-have Stories**
 
-- User can meal plan their week
 
-### 2. Screen Archetypes
-* **Creation**
-    - [ ] User can upload a new recipe to their profile
+## Video Walkthrough
 
-* **Search**
-    * [ ] User can search for recipes 
 
-* **Search Results**
-    * [ ] User can favorite recipes that are searched
 
-### 3. Navigation
+## Notes
 
-**Tab Navigation**  (Tab to Screen)
+## License
 
-* Search Tab
-* Profile/Favorite Tab
-* Create a Recipe
+    Copyright [2024] [Ingrid Betancourt]
 
-**Flow Navigation** (Screen to Screen)
-* Search Screen
-    *  => Search Result Feed
-* Profile Tab
-    * Favorites
-    * Uploaded Recipes
-* Creation Tab
-    * => Upload Form
-    * => Edit Form
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-## Wireframes
+        http://www.apache.org/licenses/LICENSE-2.0
 
-![](IMG_0949.jpg)
-
-### [BONUS] Digital Wireframes & Mockups
-### [BONUS] Interactive Prototype
-
-## Schema
-
-[This section will be completed in Unit 9]
-
-### Models
-[Add table of models]
-
-### Networking
-* [Add list of network requests by screen ]
-* [Create basic snippets for each Parse network request]
-* [OPTIONAL: List endpoints if using existing API such as Yelp]
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
