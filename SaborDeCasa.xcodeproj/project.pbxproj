@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EDC49B442BD507AD00D18175 /* RecipeComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC49B432BD507AD00D18175 /* RecipeComposeViewController.swift */; };
+		EDC49B462BD61FF900D18175 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC49B452BD61FF900D18175 /* Recipe.swift */; };
+		EDC49B482BD6263900D18175 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC49B472BD6263900D18175 /* CreateViewController.swift */; };
+		EDC49B4C2BD7705500D18175 /* RecipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC49B4B2BD7705500D18175 /* RecipeCard.swift */; };
+		EDC49B502BD7875900D18175 /* detailRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC49B4F2BD7875900D18175 /* detailRecipeViewController.swift */; };
 		EDECDB0F2BCE3F8500313D2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDECDB0E2BCE3F8500313D2A /* AppDelegate.swift */; };
 		EDECDB112BCE3F8500313D2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDECDB102BCE3F8500313D2A /* SceneDelegate.swift */; };
-		EDECDB132BCE3F8500313D2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDECDB122BCE3F8500313D2A /* ViewController.swift */; };
+		EDECDB132BCE3F8500313D2A /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDECDB122BCE3F8500313D2A /* SearchBarViewController.swift */; };
 		EDECDB162BCE3F8500313D2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDECDB142BCE3F8500313D2A /* Main.storyboard */; };
 		EDECDB182BCE3F8700313D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDECDB172BCE3F8700313D2A /* Assets.xcassets */; };
 		EDECDB1B2BCE3F8700313D2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDECDB192BCE3F8700313D2A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EDC49B432BD507AD00D18175 /* RecipeComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeComposeViewController.swift; sourceTree = "<group>"; };
+		EDC49B452BD61FF900D18175 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		EDC49B472BD6263900D18175 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		EDC49B4B2BD7705500D18175 /* RecipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCard.swift; sourceTree = "<group>"; };
+		EDC49B4F2BD7875900D18175 /* detailRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailRecipeViewController.swift; sourceTree = "<group>"; };
 		EDECDB0B2BCE3F8500313D2A /* SaborDeCasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaborDeCasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDECDB0E2BCE3F8500313D2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDECDB102BCE3F8500313D2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EDECDB122BCE3F8500313D2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDECDB122BCE3F8500313D2A /* SearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
 		EDECDB152BCE3F8500313D2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDECDB172BCE3F8700313D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDECDB1A2BCE3F8700313D2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,8 +68,13 @@
 			children = (
 				EDECDB0E2BCE3F8500313D2A /* AppDelegate.swift */,
 				EDECDB102BCE3F8500313D2A /* SceneDelegate.swift */,
-				EDECDB122BCE3F8500313D2A /* ViewController.swift */,
+				EDECDB122BCE3F8500313D2A /* SearchBarViewController.swift */,
+				EDC49B432BD507AD00D18175 /* RecipeComposeViewController.swift */,
+				EDC49B452BD61FF900D18175 /* Recipe.swift */,
 				EDECDB142BCE3F8500313D2A /* Main.storyboard */,
+				EDC49B4F2BD7875900D18175 /* detailRecipeViewController.swift */,
+				EDC49B4B2BD7705500D18175 /* RecipeCard.swift */,
+				EDC49B472BD6263900D18175 /* CreateViewController.swift */,
 				EDECDB172BCE3F8700313D2A /* Assets.xcassets */,
 				EDECDB192BCE3F8700313D2A /* LaunchScreen.storyboard */,
 				EDECDB1C2BCE3F8700313D2A /* Info.plist */,
@@ -138,9 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDECDB132BCE3F8500313D2A /* ViewController.swift in Sources */,
+				EDECDB132BCE3F8500313D2A /* SearchBarViewController.swift in Sources */,
 				EDECDB0F2BCE3F8500313D2A /* AppDelegate.swift in Sources */,
+				EDC49B502BD7875900D18175 /* detailRecipeViewController.swift in Sources */,
+				EDC49B482BD6263900D18175 /* CreateViewController.swift in Sources */,
 				EDECDB112BCE3F8500313D2A /* SceneDelegate.swift in Sources */,
+				EDC49B442BD507AD00D18175 /* RecipeComposeViewController.swift in Sources */,
+				EDC49B462BD61FF900D18175 /* Recipe.swift in Sources */,
+				EDC49B4C2BD7705500D18175 /* RecipeCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
