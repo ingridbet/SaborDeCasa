@@ -2,24 +2,35 @@
 
 Submitted by: **Ingrid Betancourt**
 
-Time spent: **2** hours spent in total
+Time spent: **10** hours spent in total
 
 ## Required Features
 
 The following functionality is completed:
 
-- [ ] Search Page Implementation
-- [ ] Connection to Recipe API
+- [X] Create Recipe Form
+- [X] Collection View of Recipes 
+- [X] Create Recipe Button
+- [X] Detail View of Created Recipe
 
 The following features are **to be** implemented:
 
-
+- [ ] Calendar Meal Prep 
+- [ ] UI updates
+- [ ] Import of images
 
 ## Video Walkthrough
 
+<div>
 
+    <a href="https://www.loom.com/share/3166cf9e6a084750a0db8b8f5e0266e5">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/3166cf9e6a084750a0db8b8f5e0266e5-with-play.gif">
+    </a>
+  </div>
 
 ## Notes
+
+I am still fixing some bugs with the create Recipe form and having it show up in the collection view.
 
 ## License
 
