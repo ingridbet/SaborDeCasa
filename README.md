@@ -22,7 +22,6 @@ The following features are **to be** implemented:
 ## Video Walkthrough
 
 <div>
-
     <a href="https://www.loom.com/share/3166cf9e6a084750a0db8b8f5e0266e5">
       <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/3166cf9e6a084750a0db8b8f5e0266e5-with-play.gif">
     </a>
