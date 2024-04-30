@@ -15,6 +15,7 @@ class RecipeComposeViewController: UIViewController {
     @IBOutlet weak var ingredientsTextView: UITextView!
     @IBOutlet weak var directionsTextView: UITextView!
     
+    var isEditMode = false
     var recipeToEdit: Recipe?
     
     var onComposeRecipe: ((Recipe) -> Void)? = nil
@@ -25,27 +26,27 @@ class RecipeComposeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //if categoryTextField.text?.isEmpty ?? true {
-          //      categoryTextField.text = categories.first
-         //   }
-        //categoryTextField.isUserInteractionEnabled = false
+        
         categoryTextField.inputView = categoryPickerView
         categoryPickerView.delegate = self
         categoryPickerView.dataSource = self
         
 
         // 1.
-        if let recipe = recipeToEdit {
-            recipeNameTextField.text = recipe.recipeName
-            //categoryTextField.text = recipe.categoryText
-            descriptionTextView.text = recipe.descriptions
-            ingredientsTextView.text = recipe.ingredients
-            directionsTextView.text = recipe.directions
+        if isEditMode{
+            if let recipe = recipeToEdit {
+                recipeNameTextField.text = recipe.recipeName
+                categoryTextField.text = recipe.categoryText
+                descriptionTextView.text = recipe.descriptions
+                ingredientsTextView.text = recipe.ingredients
+                directionsTextView.text = recipe.directions
 
-            // 2.
-            self.title = "Edit Recipe"
+                        // 2.
+                self.title = "Edit Recipe"
+            }
         }
+        
+        
     }
         
     @IBAction func didTapDoneButton(_ sender: Any) {
@@ -58,6 +59,8 @@ class RecipeComposeViewController: UIViewController {
             // ii.
             return
         }
+        print("Selected Category: \(categoryTextField.text ?? "No category selected")")
+           
         // 2.
         var recipe: Recipe
         // 3.
@@ -66,14 +69,16 @@ class RecipeComposeViewController: UIViewController {
             recipe = editRecipe
             // ii.
             recipe.recipeName = recipeName
-            //recipe.categoryText = categoryTextField.text
+            recipe.categoryText = categoryTextField.text
             recipe.descriptions = descriptionTextView.text
             recipe.ingredients = ingredientsTextView.text
             recipe.directions = directionsTextView.text
+            //recipe.save()
         } else {
             // 4.
             recipe = Recipe(id: UUID().uuidString,
                         recipeName: recipeName,
+                        categoryText: categoryTextField.text,
                         descriptions: descriptionTextView.text,
                         ingredients: ingredientsTextView.text,
                         directions: directionsTextView.text)
@@ -83,11 +88,16 @@ class RecipeComposeViewController: UIViewController {
         // 6.
         dismiss(animated: true)
         
+       // navigationController?.popViewController(animated: true)
+        
+        print("✅ We got \(recipe) recipes!")
+        
         
     }
     
     @IBAction func didTapCancelButton(_ sender: Any) {
         dismiss(animated: true)
+        //navigationController?.popViewController(animated: true)
     }
     
     
@@ -105,7 +115,7 @@ class RecipeComposeViewController: UIViewController {
         // 4.
         present(alertController, animated: true)
     }
-    
+        
 }
 
 extension RecipeComposeViewController: UIPickerViewDataSource, UIPickerViewDelegate{

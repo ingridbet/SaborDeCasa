@@ -15,10 +15,10 @@ struct Recipe : Codable {
     var ingredients: String?
     var directions: String?
     
-    init(id: String, recipeName: String, descriptions: String? = nil,ingredients: String? = nil, directions: String?) {
+    init(id: String, recipeName: String,categoryText: String?, descriptions: String? = nil,ingredients: String? = nil, directions: String?) {
         self.id = id
         self.recipeName = recipeName
-        //self.categoryText = categoryText
+        self.categoryText = categoryText
         self.descriptions = descriptions
         self.ingredients = ingredients
         self.directions = directions
@@ -33,6 +33,7 @@ extension Recipe {
         let defaults = UserDefaults.standard
         let encodedData = try! JSONEncoder().encode(recipes)
         defaults.set(encodedData, forKey: "recipes")
+        print("Recipes saved successfully.")
     }
 
     // Retrieve an array of saved tasks from UserDefaults.
@@ -41,14 +42,14 @@ extension Recipe {
         // TODO: Get the array of saved tasks from UserDefaults
         let defaults = UserDefaults.standard
         if let data = defaults.data(forKey: "recipes") {
-                // 3.
-                let decodedTasks = try! JSONDecoder().decode([Recipe].self, from: data)
+            let decodedTasks = try! JSONDecoder().decode([Recipe].self, from: data)
                 // 4.
-                return decodedTasks
-            } else {
+            print("Recipes retrieved successfully.")
+            return decodedTasks
+        } else {
                 // 5.
-                return []
-            }
+            return []
+        }
     }
 
     // Add a new task or update an existing task with the current task.

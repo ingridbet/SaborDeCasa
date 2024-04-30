@@ -9,40 +9,66 @@ import UIKit
 
 class detailRecipeViewController: UIViewController {
 
-    @IBOutlet weak var recipeImageView: UIImageView!
-    var recipe: Recipe!
 
     @IBOutlet weak var recipeNmLabel: UILabel!
     
     @IBOutlet weak var categoryLabel: UILabel!
     
-    @IBOutlet weak var decriptionTextView: UITextView!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
     @IBOutlet weak var ingredientsTextView: UITextView!
     
     @IBOutlet weak var directionsTextView: UITextView!
+    
+    
+    var recipe: Recipe!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Add edit button to the navigation bar
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editRecipe))
+            
         // Do any additional setup after loading the view.
         
-        recipeNmLabel.text = recipe.recipeName
-        categoryLabel.text = recipe.categoryText
-        decriptionTextView.text = recipe.descriptions
-        ingredientsTextView.text = recipe.ingredients
-        directionsTextView.text = recipe.directions
+        if let recipe = recipe {
+            recipeNmLabel.text = recipe.recipeName
+            categoryLabel.text = recipe.categoryText
+            descriptionTextView.text = recipe.descriptions
+            ingredientsTextView.text = recipe.ingredients
+            directionsTextView.text = recipe.directions
+          } else {
+              // Handle the case where recipe is nil
+              print("Recipe is nil")
+          }
+    
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func editRecipe() {
+        guard let recipeToEdit = recipe else {
+            return
+        }
+        
+        // Instantiate the RecipeComposeViewController
+        let composeVC = storyboard?.instantiateViewController(withIdentifier: "RecipeComposeViewController") as! RecipeComposeViewController
+        
+        composeVC.isEditMode = true
+        // Pass the recipe to be edited
+        composeVC.recipeToEdit = recipeToEdit
+        
+        // Present the RecipeComposeViewController for editing
+        navigationController?.pushViewController(composeVC, animated: true)
     }
-    */
+    
+    private func refreshRecipes() {
+        let recipes = Recipe.getRecipes()
+        // Assuming getRecipes() retrieves updated recipes from data source
+        // Update the recipes array in SearchBarViewController
+        if let searchBarViewController = navigationController?.viewControllers.first as? RecipeListViewController {
+            searchBarViewController.recipes = recipes
+            // Reload the collection view to reflect the changes
+            searchBarViewController.collectionView.reloadData()
+        }
+    }
 
 }
